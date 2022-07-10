@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;800');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter',
+        Arial,
+        Helvetica,
+        sans-serif;
+    background-color: #4C1D95;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    background-color: #F5F3FF;
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 4%;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #2B283A;
+    font-family: 'Karla',
+        Helvetica,
+        sans-serif;
+    ;
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -0.2rem;
+}
+
+h6 {
+    color: #8B5CF6;
+    font-family: 'Inter',
+        Arial,
+        Helvetica,
+        sans-serif;
+    font-weight: 400;
+    font-size: .8rem;
+    margin: .2rem 0;
+}
+
+p {
+    color: #6B7280;
+    padding: 1rem 0;
+}
+
+.accent {
+    color: #6D28D9;
+}
+
+button {
+    background-color: #6D28D9;
+    color: #ffffff;
+    font-family: 'Inter',
+        Arial,
+        Helvetica,
+        sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 6px;
+    border: none;
+    margin-bottom: 1rem;
+    max-width: 50%;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+hr {
+    border: 1px solid #D5D4D8;
+    margin: 1rem 0;
+
+}
+
+.slider-container {
+    background-color: #EDE9FE;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    margin: 0 .8rem;
+    height: .2rem;
+    border-radius: 4px;
+    width: 80%;
+    background-color: #C4B5FD;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-moz-range-thumb {
+    width: .8rem;
+    height: .8rem;
+    border-radius: 50%;
+    border: none;
+    background: #6D28D9;
+    cursor: pointer;
+}
+
+.slider-range {
+    margin-bottom: 2rem;
+    text-align: right;
+}
+
+#sliderOutput {
+    font-weight: 800;
+}
+
+.password-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.password {
+    background-color: #EDE9FE;
+    width: 49%;
+    height: 3rem;
+    border-radius: 6px;
+    color: #7C3AED;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter',
+        Arial,
+        Helvetica,
+        sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
