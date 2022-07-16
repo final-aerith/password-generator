@@ -40,7 +40,7 @@ generatePassword.addEventListener("click", function () {
         addClass(this, "show");
         setTimeout(() => {
             removeClass(this, "show")
-        }, 1500)
+        }, 1000)
     });;
 
     password2.addEventListener("click", function () {
@@ -49,7 +49,7 @@ generatePassword.addEventListener("click", function () {
         addClass(this, "show");
         setTimeout(() => {
             removeClass(this, "show")
-        }, 1500)
+        }, 1000)
     });;
 });
 
@@ -62,5 +62,4 @@ function removeClass(a, b) {
 //Show copied alert
 function addClass(a, b) {
     a.classList.add(b);
-    // setTimeout(removeClass(a,b), 3000)
 };
