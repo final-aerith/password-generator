@@ -148,4 +148,26 @@ hr {
         sans-serif;
     font-weight: 600;
     font-size: 0.9rem;
+    position: relative;
+}
+
+
+.popup::before {
+    content: "Copied!";
+    position: absolute;
+    display: block;
+    opacity: 0;
+    background-color: #7C3AED;
+    color: #EDE9FE;
+    padding: .5rem;
+    border-radius: 5px;
+    font-size: .8rem;
+    bottom: 90%;
+    transform: scale(0);
+    transition: transform ease-out 50ms;
+}
+
+.show.popup::before {
+    opacity: 1;
+    transform: scale(1);
 }

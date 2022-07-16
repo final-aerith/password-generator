@@ -8,6 +8,7 @@ const characters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", 
 ];
 
 const generatePassword = document.getElementById("generatePassword");
+const passwords = document.getElementsByClassName(".password");
 const password1 = document.getElementById("password1");
 const password2 = document.getElementById("password2");
 const passwordLenght = document.getElementById("passwordLenght");
@@ -22,16 +23,44 @@ passwordLenght.oninput = function () {
     sliderOutput.textContent = this.value;
 }
 
-
 // Listen to button click to generate passwords
 generatePassword.addEventListener("click", function () {
-    console.log(passwordLenght.value)
+    passwordOne = [];
+    passwordTwo = [];
     for (let i = 0; i < passwordLenght.value; i++) {
         passwordOne += characters[Math.floor(Math.random() * characters.length)]
         passwordTwo += characters[Math.floor(Math.random() * characters.length)]
     }
     password1.textContent = passwordOne;
     password2.textContent = passwordTwo;
-    passwordOne = [];
-    passwordTwo = [];
-}) 
+    // Copy passwords
+    password1.addEventListener("click", function () {
+        navigator.clipboard.writeText(passwordOne);
+        /* Alert the copied text */
+        addClass(this, "show");
+        setTimeout(() => {
+            removeClass(this, "show")
+        }, 1500)
+    });;
+
+    password2.addEventListener("click", function () {
+        navigator.clipboard.writeText(passwordTwo)
+        /* Alert the copied text */
+        addClass(this, "show");
+        setTimeout(() => {
+            removeClass(this, "show")
+        }, 1500)
+    });;
+});
+
+
+//Hide copied alert
+function removeClass(a, b) {
+    a.classList.remove(b);
+};
+
+//Show copied alert
+function addClass(a, b) {
+    a.classList.add(b);
+    // setTimeout(removeClass(a,b), 3000)
+};
